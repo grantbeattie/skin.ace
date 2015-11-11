@@ -41,6 +41,8 @@
 	<include file="IncludesMenuH.xml"/>
 	<include file="IncludesMenuV.xml"/>
 	<include file="IncludesVIPMenu.xml"/>
+	<include file="IncludesPVR.xml"/>
+	<include file="ViewsPVRGuide.xml"/>
 	<include file="IncludesMusic.xml"/>
 	<include file="IncludesWeather.xml"/>
 	<include file="IncludesLyrics.xml"/>
@@ -461,7 +463,7 @@
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">conditional</animation>
-			<visible>Window.IsVisible(101) | Window.IsVisible(103) | Window.IsVisible(106) | Window.IsVisible(109) | Window.IsVisible(111) | Window.IsVisible(114) | Window.IsVisible(121) | Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(130) | Window.IsVisible(132) | Window.IsVisible(134) | Window.IsVisible(136) | Window.IsVisible(137) | Window.IsVisible(623) | Window.IsVisible(2000) | Window.IsVisible(2008)</visible>
+			<visible>Window.IsVisible(101) | Window.IsVisible(103) | Window.IsVisible(106) | Window.IsVisible(109) | Window.IsVisible(111) | Window.IsVisible(114) | Window.IsVisible(121) | Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(130) | Window.IsVisible(132) | Window.IsVisible(134) | Window.IsVisible(136) | Window.IsVisible(137) | Window.IsVisible(1101) | Window.IsVisible(2000) | Window.IsVisible(2008)</visible>
 		</control>
 	</include>
 	<include name="TrailerWindow">
@@ -1100,6 +1102,7 @@
 		<width>330</width>
 		<height>563</height>
 		<onleft>Close</onleft>
+		<onright>Close</onright>
 		<onleft condition="![Skin.HasSetting(nosmartsub) | Skin.HasSetting(custommode)]">ActivateWindow(5099)</onleft>
 		<onright condition="Skin.HasSetting(custommode) + !StringCompare(Container(9100).ListItem.Property(type),add)">5120</onright>
 		<orientation>vertical</orientation>
